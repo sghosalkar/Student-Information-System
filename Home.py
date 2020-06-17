@@ -1,5 +1,9 @@
 from tkinter import *
 from Views.AddView import createAddView
+from Views.Update import createUpdate
+from Views.View  import createView
+from Views.Delete import createDelete
+from Views.Graph import createGraph
 
 
 root = Tk()
@@ -8,13 +12,13 @@ root.geometry("300x600+10+20")
 def addClickAction():
     createAddView(root)
 def viewClickAction():
-    root.withdraw()
+    createView(root)
 def UpdateClickAction():
-    root.withdraw()
+    createUpdate(root)
 def DeleteClickAction():
-    root.withdraw()
+    createDelete(root)
 def GraphClickAction():
-    root.withdraw()            
+    createGraph(root)            
     
 
 btnAdd = Button(root, text = "Add", font=("arial", 18, 'bold'),width=10, command=addClickAction)
