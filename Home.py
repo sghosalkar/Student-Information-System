@@ -1,22 +1,23 @@
 from tkinter import *
-from Views.AddView import createAddView
-from Views.Update import createUpdate
-from Views.View  import createView
-from Views.Delete import createDelete
+from Views.AddView import AddView
+from Views.Update import UpdateView
+from Views.View  import RecordsView
+from Views.Delete import DeleteView
 from Views.Graph import createGraph
+
 
 
 root = Tk()
 root.title('S.M.S')
 root.geometry("300x600+10+20")
 def addClickAction():
-    createAddView(root)
+    AddView(root)
 def viewClickAction():
-    createView(root)
+    RecordsView(root)
 def UpdateClickAction():
-    createUpdate(root)
+    UpdateView(root)
 def DeleteClickAction():
-    createDelete(root)
+    DeleteView(root)
 def GraphClickAction():
     createGraph(root)            
     
